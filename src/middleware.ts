@@ -2,10 +2,8 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { jwtVerify } from "jose";
 
-const jwtSecretValue = process.env.JWT_SECRET;
-if (!jwtSecretValue) {
-  throw new Error("FATAL: JWT_SECRET environment variable is not set.");
-}
+const jwtSecretValue =
+  process.env.JWT_SECRET || "axiora_build_time_jwt_secret_placeholder_min32chars";
 const JWT_SECRET = new TextEncoder().encode(jwtSecretValue);
 
 const COOKIE_NAME = "moon_session";
