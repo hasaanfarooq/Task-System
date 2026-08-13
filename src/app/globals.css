@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-size: 15px;
+    background-color: #FAFAF9;
+    color: #1C1917;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: #FAFAF9;
+    color: #1C1917;
+    font-family: var(--font-ibm-sans), system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Notion / Linear-like subtle border styling */
+.border-subtle {
+  border-color: #E7E5E4;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAFAF9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D6D3D1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A8A29E;
+}
